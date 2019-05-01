@@ -13,21 +13,24 @@ object FizzBuzz {
 
     val numberArray = number.toString.toCharArray
 
-    var tempChar = ""
+    var tempChar: Char = ' '
     for(numberChar <- numberArray) {
-      if(!tempChar.equals(numberChar) && !tempChar.isEmpty)
+      if(!tempChar.equals(numberChar) && !tempChar.isSpaceChar)
         identicalDigits = false
       tempChar = numberChar
     }
 
     if(number > 10 && identicalDigits)
+      deluxeFlag = true
     if((number % 3 == 0) || (number.toString.contains("3")))
       fizzFlag = true
 
     if((number % 5 == 0) || (number.toString.contains("5")))
       buzzFlag = true
 
-    if(fizzFlag && buzzFlag)
+    if(fizzFlag && buzzFlag && deluxeFlag)
+      "fizz buzz deluxe"
+    else if(fizzFlag && buzzFlag)
       "fizz buzz"
     else if(fizzFlag)
       "fizz"
@@ -38,4 +41,5 @@ object FizzBuzz {
 
   }
 }
+
 
