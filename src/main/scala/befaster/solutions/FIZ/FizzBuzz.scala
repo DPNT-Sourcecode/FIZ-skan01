@@ -17,21 +17,30 @@ object FizzBuzz {
 
     var fizzFlag = false
     var buzzFlag = false
-    var identicalDigits = true
+//    var identicalDigits = true
     var deluxeFlag = false
 
-    val numberArray = number.toString.toCharArray
+    val numberList = number.toString.map(_.asDigit).toList
 
-    var tempChar: Char = ' '
+    if(number > 10) {
+      val distinctNums = numberList.distinct
+      for(d <- distinctNums) {
+        println(">" + d)
+      }
+      println(distinctNums.size + ", " + numberList.size)
+      if(distinctNums.size == numberList.size)
+        deluxeFlag = true
+
+    }
+
+/*    var tempChar: Char = ' '
     for(numberChar <- numberArray) {
       println(tempChar + "," + numberChar + ", " + tempChar.isSpaceChar)
       if(!tempChar.equals(numberChar) && !tempChar.isSpaceChar)
         identicalDigits = false
       tempChar = numberChar
-    }
+    }*/
 
-    if(number > 10 && identicalDigits)
-      deluxeFlag = true
     if((number % 3 == 0) || (number.toString.contains("3")))
       fizzFlag = true
 
@@ -51,6 +60,7 @@ object FizzBuzz {
 
   }
 }
+
 
 
 
