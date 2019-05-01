@@ -8,5 +8,3 @@ object Sum {
     x + y
   }
 }
-
-
