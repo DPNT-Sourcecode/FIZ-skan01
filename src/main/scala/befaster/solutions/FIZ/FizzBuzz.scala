@@ -22,7 +22,7 @@ object FizzBuzz {
     var fakeDeluxeFlag = false
 
     //deluxe/fake deluxe
-    if(((number % 3 == 0) && (number.toString.contains(3))) || ((number % 5 == 0) && (number.toString.contains(5)))) {
+    if(((number % 3 == 0) && (number.toString.contains("3"))) || ((number % 5 == 0) && (number.toString.contains("5")))) {
       if(number % 2 == 0)
         deluxeFlag = true
       else
@@ -62,4 +62,5 @@ object FizzBuzz {
 
   }
 }
+
 
