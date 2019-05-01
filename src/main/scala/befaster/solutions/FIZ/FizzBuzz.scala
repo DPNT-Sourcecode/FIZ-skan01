@@ -3,7 +3,16 @@ package befaster.solutions.FIZ
 import befaster.runner.SolutionNotImplementedException
 
 object FizzBuzz {
-  
+
+  def main(args: Array[String]): Unit = {
+    println(fizzBuzz(66))
+    println(fizzBuzz(3))
+    println(fizzBuzz(51))
+    println(fizzBuzz(45))
+    println(fizzBuzz(55))
+    println(fizzBuzz(33))
+  }
+
   def fizzBuzz(number: Int): String = {
 
     var fizzFlag = false
@@ -11,17 +20,12 @@ object FizzBuzz {
     var deluxeFlag = false
     var fakeDeluxeFlag = false
 
-    val numberList = number.toString.map(_.asDigit).toList
-
-    //deluxe check
-    if(number > 10) {
-      val distinctNums = numberList.distinct
-      if(distinctNums.size == 1) {
-        if(number % 2 == 0)
-          deluxeFlag = true
-        else
-          fakeDeluxeFlag = true
-      }
+    //deluxe/fake deluxe
+    if(((number % 3 == 0) && (number.toString.contains(3))) || ((number % 5 == 0) && (number.toString.contains(5)))) {
+      if(n % 2 == 0)
+        deluxeFlag = true
+      else
+        fakeDeluxeFlag = true
     }
 
     if((number % 3 == 0) || (number.toString.contains("3")))
@@ -57,7 +61,3 @@ object FizzBuzz {
 
   }
 }
-
-
-
-
