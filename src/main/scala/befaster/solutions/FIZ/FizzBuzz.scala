@@ -5,8 +5,8 @@ import befaster.runner.SolutionNotImplementedException
 object FizzBuzz {
 
   def main(args: Array[String]): Unit = {
-    println(fizzBuzz(11))
-    println(fizzBuzz(13))
+    println(fizzBuzz(66))
+    println(fizzBuzz(3))
     println(fizzBuzz(51))
     println(fizzBuzz(45))
     println(fizzBuzz(55))
@@ -31,8 +31,6 @@ object FizzBuzz {
         else
           fakeDeluxeFlag = true
       }
-
-
     }
 
     if((number % 3 == 0) || (number.toString.contains("3")))
@@ -49,6 +47,14 @@ object FizzBuzz {
       "buzz deluxe"
     else if(deluxeFlag)
       "deluxe"
+    else if(fizzFlag && buzzFlag && fakeDeluxeFlag)
+      "fizz buzz fake deluxe"
+    else if(fizzFlag && fakeDeluxeFlag)
+      "fizz fake deluxe"
+    else if(buzzFlag && fakeDeluxeFlag)
+      "buzz fake deluxe"
+    else if(fakeDeluxeFlag)
+      "fake deluxe"
     else if(fizzFlag && buzzFlag)
       "fizz buzz"
     else if(fizzFlag)
@@ -60,5 +66,6 @@ object FizzBuzz {
 
   }
 }
+
 
 
