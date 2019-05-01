@@ -4,16 +4,6 @@ import befaster.runner.SolutionNotImplementedException
 
 object FizzBuzz {
 
-  def main(args: String[Array]): Unit = {
-    println(fizzBuzz(13))
-    println(fizzBuzz(55))
-    println(fizzBuzz(30))
-    println(fizzBuzz(35))
-    println(fizzBuzz(8))
-  }
-
-
-
   def fizzBuzz(number: Int): String = {
 
     var fizzFlag = false
@@ -36,6 +26,7 @@ object FizzBuzz {
 
   }
 }
+
 
 
 
