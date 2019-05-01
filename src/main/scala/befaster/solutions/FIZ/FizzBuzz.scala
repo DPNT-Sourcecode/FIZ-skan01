@@ -4,6 +4,15 @@ import befaster.runner.SolutionNotImplementedException
 
 object FizzBuzz {
 
+  def main(args: Array[String]): Unit = {
+    println(fizzBuzz(11))
+    println(fizzBuzz(13))
+    println(fizzBuzz(51))
+    println(fizzBuzz(45))
+    println(fizzBuzz(55))
+    println(fizzBuzz(11))
+  }
+
   def fizzBuzz(number: Int): String = {
 
     var fizzFlag = false
@@ -15,6 +24,7 @@ object FizzBuzz {
 
     var tempChar: Char = ' '
     for(numberChar <- numberArray) {
+      println(tempChar + "," + numberChar + ", " + tempChar.isSpaceChar)
       if(!tempChar.equals(numberChar) && !tempChar.isSpaceChar)
         identicalDigits = false
       tempChar = numberChar
@@ -41,5 +51,6 @@ object FizzBuzz {
 
   }
 }
+
 
 
