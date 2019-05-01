@@ -26,6 +26,10 @@ object FizzBuzz {
 
     if(fizzFlag && buzzFlag && deluxeFlag)
       "fizz buzz deluxe"
+    else if(fizzFlag && deluxeFlag)
+      "fizz deluxe"
+    else if(buzzFlag && deluxeFlag)
+      "buzz deluxe"
     else if(deluxeFlag)
       "deluxe"
     else if(fizzFlag && buzzFlag)
@@ -39,3 +43,4 @@ object FizzBuzz {
 
   }
 }
+
