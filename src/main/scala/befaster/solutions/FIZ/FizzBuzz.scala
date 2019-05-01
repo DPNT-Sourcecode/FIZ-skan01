@@ -11,6 +11,7 @@ object FizzBuzz {
     println(fizzBuzz(45))
     println(fizzBuzz(55))
     println(fizzBuzz(33))
+    println(fizzBuzz(555))
   }
 
   def fizzBuzz(number: Int): String = {
@@ -22,7 +23,7 @@ object FizzBuzz {
 
     //deluxe/fake deluxe
     if(((number % 3 == 0) && (number.toString.contains(3))) || ((number % 5 == 0) && (number.toString.contains(5)))) {
-      if(n % 2 == 0)
+      if(number % 2 == 0)
         deluxeFlag = true
       else
         fakeDeluxeFlag = true
@@ -61,3 +62,4 @@ object FizzBuzz {
 
   }
 }
+
