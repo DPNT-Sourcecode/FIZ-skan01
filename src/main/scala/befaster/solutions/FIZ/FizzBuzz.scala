@@ -8,7 +8,19 @@ object FizzBuzz {
 
     var fizzFlag = false
     var buzzFlag = false
+    var identicalDigits = true
+    var deluxeFlag = false
 
+    val numberArray = number.toString.toCharArray
+
+    var tempChar = ""
+    for(numberChar <- numberArray) {
+      if(!tempChar.equals(numberChar) && !tempChar.isEmpty)
+        identicalDigits = false
+      tempChar = numberChar
+    }
+
+    if(number > 10 && identicalDigits)
     if((number % 3 == 0) || (number.toString.contains("3")))
       fizzFlag = true
 
@@ -26,3 +38,4 @@ object FizzBuzz {
 
   }
 }
+
