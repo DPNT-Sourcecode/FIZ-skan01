@@ -3,6 +3,7 @@ package befaster.solutions.FIZ
 import befaster.runner.SolutionNotImplementedException
 
 object FizzBuzz {
+
   def fizzBuzz(number: Int): String = {
 
     if((number % 3 == 0) && (number % 5 == 0))
@@ -15,4 +16,5 @@ object FizzBuzz {
       number.toString
   }
 }
+
 
